@@ -11,6 +11,6 @@
     },
     "permissions": ["theme", "tabs"],
     "background": {
-        "scripts": ["borderify.js"]
+        "scripts": ["redify.js"]
     }      
   }
