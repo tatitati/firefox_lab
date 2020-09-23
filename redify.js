@@ -9,12 +9,6 @@ const themes = {
 browser.tabs.onActivated.addListener(event => update(event.tabId));
 browser.tabs.onUpdated.addListener(tabId => update(tabId));  
 
-
-// async function getCurrentThemeInfo() {
-//   
-//   console.log('im here');
-// }
-
 var current = null;
 
 async function update(tabId) {    
