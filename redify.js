@@ -20,11 +20,12 @@ async function update(tabId) {
     let windowId = tab.windowId;
     var url = tab.url;
 
-    if (tab.active &&  (/.simplybusiness.live/.test(url) || '/sb-airflow-webserver.simplybusiness.co.uk/'.test(url))) {
+    if (tab.active) {
+      if (/.simplybusiness.live/.test(url) || /sb-airflow-webserver.simplybusiness.co.uk/.test(url)) {
         browser.theme.update(windowId, themes.live);        
-    } else {
+      } else {
         browser.theme.update(windowId, current);        
-        // browser.theme.reset(windowId);  
-    }    
+      }    
+    }
 }
   
